@@ -57,15 +57,12 @@ p {
 /* /////////////////////////////////
 Les composants
 //////////////////////////////////// */
-/* **************************************** .menu */
+/* ----------------------------------------- .menu */
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   list-style-type: none;
-  gap: 3px 0;
-}
-.menu__li {
-  margin: 3px 0;
+  gap: 10px 0;
 }
 .menu__li a {
   text-decoration: none;
@@ -76,24 +73,24 @@ Les composants
   display: flex;
   height: 1.6rem;
   width: 14rem;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0.01);
-  flex: 1;
+  flex: 1 0 auto;
   padding: 3px;
 }
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 .recherche__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
   font-style: italic;
 }
 .recherche__input::placeholder {
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
   font-style: italic;
 }
 .recherche__img {

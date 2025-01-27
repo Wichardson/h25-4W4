@@ -3,4 +3,4 @@
 ### Auteur: Eddy Martin
 La réalisation de ce prototype représente une première étape pour la conception d'un thème Wordpress.
 
-#### Github-page : https://wichardson.github.io/h25-4W4/
+#### Github-page : https://wichardson.github.io/h25-4W4/git status

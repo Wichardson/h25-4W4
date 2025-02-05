@@ -7,15 +7,18 @@
     justify-content: center;
     flex-direction: row;
     padding: 30px;
+    background-color: white;
+    margin-top: -60px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     
     &__inscription{
-        display: flex;
-        flex-direction: column;
-        background-color: aquamarine;
+        // display: flex;
+        // flex-direction: column;
 
     }
 
     &__input{
-        margin-top: 8px;
+        // margin-top: 8px;
     }
 }

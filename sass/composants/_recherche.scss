@@ -1,4 +1,7 @@
 .recherche{
+    @media screen and (max-width: 800px){
+            display: none;
+    }
     display:flex;
     height: 1.6rem;
     width : 14rem;
@@ -6,6 +9,7 @@
 
 // le & prend la valeur du sélecteur parent 
     &__input{
+        
         border : none;
         outline: none;
         background-color: rgba(0,0,0, .01);

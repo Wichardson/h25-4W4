@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f3ebe0;
+    padding: 10px;
     &__navigation {
         @media screen and (max-width: 800px) {
             position : absolute;
             top:0;
             right:0;
-            background-color: #fff;
+            background-color: #f3ebe0;
             padding : 20px;
             flex-direction: column; 
             width : 100vw;
@@ -25,4 +27,8 @@
         align-items: center;
                                                                    
     }
+}
+
+a{
+    color: black;
 }

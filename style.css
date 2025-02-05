@@ -72,7 +72,7 @@ Les composants
 }
 .menu__li a {
   text-decoration: none;
-  padding: 4px;
+  padding: 10px;
 }
 
 .recherche {
@@ -116,6 +116,8 @@ Les layouts
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f3ebe0;
+  padding: 10px;
 }
 .entete__navigation {
   width: auto;
@@ -130,14 +132,61 @@ Les layouts
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #f3ebe0;
     padding: 20px;
     flex-direction: column;
     width: 100vw;
   }
 }
 
+a {
+  color: black;
+}
+
+.galerie {
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+.galerie__img {
+  width: 250%;
+  height: 100%;
+  background-position: center;
+}
+.galerie__figure {
+  max-width: 170px;
+}
+
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+  background-size: cover;
+}
+.hero__titre {
+  padding-bottom: 15px;
+}
+.hero__contenu {
+  padding-bottom: 15px;
+}
+.hero__description {
+  padding-bottom: 15px;
+}
+.hero__courriel {
+  padding-bottom: 15px;
+}
+.hero__adresse {
+  padding-bottom: 15px;
+}
+.hero__icone {
+  padding-bottom: 15px;
+}
+
+.hero button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */

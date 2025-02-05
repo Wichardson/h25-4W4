@@ -1,0 +1,19 @@
+.galerie{
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+
+    &__img{
+        width: 250%;
+        height: 100%;
+        background-position: center;
+        
+    }
+
+    &__figure{
+        max-width: 170px;
+    }
+}
+

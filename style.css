@@ -143,6 +143,10 @@ Les layouts
     width: 100vw;
   }
 }
+.entete__logo img {
+  width: 75px;
+  height: 75px;
+}
 
 a {
   color: black;

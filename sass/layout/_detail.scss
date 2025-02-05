@@ -15,10 +15,16 @@
     &__inscription{
         // display: flex;
         // flex-direction: column;
+        padding: 10px;
 
     }
 
     &__input{
         // margin-top: 8px;
+        padding: 10px;
     }
+}
+
+.detail button{
+    background-color: rgba(255, 255, 255, 0.6);
 }

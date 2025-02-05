@@ -1,0 +1,21 @@
+.detail{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+    
+    &__inscription{
+        display: flex;
+        flex-direction: column;
+        background-color: aquamarine;
+
+    }
+
+    &__input{
+        margin-top: 8px;
+    }
+}

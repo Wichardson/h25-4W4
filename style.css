@@ -226,8 +226,10 @@ a {
 }
 .detail__input {
   padding: 10px;
+  border: 3px solid #4bf9ff;
 }
 
 .detail button {
   background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid #4bf9ff;
 }/*# sourceMappingURL=style.css.map */

@@ -81,6 +81,11 @@ Les composants
   width: 14rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 800px) {
+  .recherche {
+    display: none;
+  }
+}
 .recherche__input {
   border: none;
   outline: none;

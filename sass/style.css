@@ -24,11 +24,15 @@ Les balise de bases
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: #ffffff url("images/plane.png") repeat-y scroll 70px 41px;
+  background-size: 70px;
 }
 
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
   text-shadow: 2px 2px rgb(22, 253, 222);
+  margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
@@ -61,9 +65,11 @@ Les composants
 /* ----------------------------------------- .menu */
 .menu {
   display: flex;
+  font-size: 16px;
   flex-direction: row;
   list-style-type: none;
-  gap: 10px 0;
+  gap: 30px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 800px) {
   .menu {
@@ -117,13 +123,32 @@ Les composants
 }
 .carte__contenu {
   background-color: aliceblue;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carte__titre {
+  font-size: 40px;
+}
+.carte__bouton {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
 }
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
 .global {
   max-width: 1100px;
-  padding: 10vh 5vw;
+  padding: 5vh 5vw;
+}
+
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px;
 }
 
 .entete {
@@ -160,12 +185,16 @@ Les layouts
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
   background-size: cover;
+}
+.hero__titre {
+  margin: none;
 }
 
 .hero button {
@@ -179,7 +208,7 @@ a {
 
 .detail {
   margin: 0 auto;
-  width: 80%;
+  width: 70vw;
   display: flex;
   align-items: center;
   align-content: flex-start;
@@ -191,23 +220,41 @@ a {
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 800px) {
+  .detail {
+    flex-direction: column;
+  }
+}
 .detail__inscription {
   padding: 10px;
 }
 .detail__input {
   padding: 10px;
+  width: 10vw;
   border: 3px solid #4bf9ff;
+}
+@media screen and (max-width: 800px) {
+  .detail__input {
+    width: 60vw;
+  }
 }
 
 .detail button {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid #4bf9ff;
+  width: 6vw;
+}
+@media screen and (max-width: 800px) {
+  .detail button {
+    width: 30vw;
+  }
 }
 
 /*
   --------------------------------- Layout du pied de page
 */
 footer {
+  margin: 0 auto;
   background-color: rgb(236, 136, 13);
   color: #000;
 }

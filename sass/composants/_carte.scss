@@ -6,6 +6,11 @@
    &--grande{
     flex: 1 1 250px;
    } 
+
+   &--grande h2{
+    
+    
+   } 
    &__image{
 
     img{
@@ -13,14 +18,27 @@
     }
    }
    &__contenu{
-       background-color: aliceblue; 
+    background-color: aliceblue;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
    }
    &__titre{
-    
+    font-size: 40px;
    }
    &__description{}
+
    &__bouton{
-    &--actif{}
+    background-color: aquamarine;
+
+    display: flex;
+    justify-content: center;
+
+    &--actif{
+
+    }
    }
 
 

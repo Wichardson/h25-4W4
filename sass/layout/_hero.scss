@@ -2,6 +2,10 @@
     background-image: url("images/maldives.jpg");
     min-height: 100vh;
     background-size: cover;
+
+    &__titre{
+        margin: none;
+    }
 }
 
 .hero button{
@@ -15,7 +19,10 @@
 
 .detail{
     margin: 0 auto;
-    width: 80%;
+    width: 70vw;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        }
     display: flex;
     align-items: center;
     align-content: flex-start;
@@ -37,12 +44,21 @@
     &__input{
         // margin-top: 8px;
         padding: 10px;
+        width: 10vw;
         border: 3px solid #4bf9ff;
+        @media screen and (max-width: 800px) {
+            width: 60vw;
+            }
     }
 }
 
 .detail button{
     background-color: rgba(255, 255, 255, 0.6);
     border: 3px solid #4bf9ff;
+    width: 6vw;
+    @media screen and (max-width: 800px) {
+        width: 30vw;
+        }
+    
 }
 

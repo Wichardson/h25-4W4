@@ -1,12 +1,18 @@
 body{
     font-size : 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+        background: #ffffff url("images/plane.png") repeat-y scroll 70px 41px;
+        background-size: 70px;
+        
 }
 
 
 h1{
     font-size: clamp(2rem, 3vw, 5rem);
     text-shadow: 2px 2px rgb(22, 253, 222);
+    margin: 0 auto;
+    text-align: center;
 }
 h2{
     font-size: clamp(1.5rem, 2.5vw, 3rem);

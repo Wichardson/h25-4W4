@@ -10,6 +10,9 @@
             ?>
                 <h2><?php the_title(); ?></h2>
                 <div><?php the_content() ?>
+                <p>Température maximum : <?php the_field("temperature_maximum") ?> </p>
+                <p>Température minimum : <?php the_field("temperature_minimum") ?> </p>
+                <p>Température moyenne : <?php the_field("temperature_moyenne") ?> </p>
             <?php endwhile; endif; ?>
         </div>
     </section>

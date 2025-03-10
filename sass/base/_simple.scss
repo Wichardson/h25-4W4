@@ -2,7 +2,7 @@ body{
     font-size : 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
-        background: #ffffff url("images/plane.png") repeat-y scroll 70px 41px;
+        background: #fbe2f3 url("images/plane.png") repeat-y scroll 70px 41px;
         background-size: 70px;
         
 }
@@ -10,7 +10,7 @@ body{
 
 h1{
     font-size: clamp(2rem, 3vw, 5rem);
-    text-shadow: 2px 2px rgb(22, 253, 222);
+    text-shadow: 2px 2px #fbe2f3;
     margin: 0 auto;
     text-align: center;
 }

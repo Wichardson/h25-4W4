@@ -29,6 +29,16 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_b
   'section' => 'hero_section',
 )));
 
+//////////////////////////////// ajout de la données image en background
+$wp_customize->add_setting('hero_color', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+///////////////////////////////// ajout du contrôle de la donnée
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_color', array(
+  'label' => __('color du texte', 'theme_tp'),
+  'section' => 'hero_section',
+)));
 
 }
 

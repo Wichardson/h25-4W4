@@ -24,7 +24,7 @@ Les balise de bases
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: #fbe2f3 url("images/plane.png") repeat-y scroll 70px 41px;
+  background: #fcebf6 url("images/plane.png") repeat-y scroll 70px 41px;
   background-size: 70px;
 }
 
@@ -137,6 +137,10 @@ Les composants
 .carte__titre {
   font-size: 40px;
 }
+.carte__description {
+  margin: 0 auto;
+  padding: 1px;
+}
 .carte__bouton {
   background-color: #dba9cb;
   display: flex;
@@ -155,6 +159,12 @@ Les layouts
   flex-wrap: wrap;
   margin: 0 auto;
   gap: 10px;
+}
+
+.centrecat p {
+  margin: 0 auto;
+  width: 78vw;
+  padding: 4px;
 }
 
 .entete {
@@ -272,6 +282,7 @@ footer {
   max-width: 100%;
   display: flex;
   flex-direction: row;
+  height: 35vh;
 }
 .piedpage__s1 {
   display: flex;

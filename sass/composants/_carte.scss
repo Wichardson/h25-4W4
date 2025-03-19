@@ -33,7 +33,10 @@
    &__titre{
     font-size: 40px;
    }
-   &__description{}
+   &__description{
+    margin: 0 auto;
+    padding: 1px;
+   }
 
    &__bouton{
     background-color: #dba9cb;

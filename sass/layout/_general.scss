@@ -1,14 +1,25 @@
 .global{
     max-width: 1200px;
     padding: 5vh 5vw;
+
+    
     
 }
 
 .populaire .global{
     display: flex;
     flex-wrap: wrap;
+    
+}
+
+.erreur{
     margin: 0 auto;
     gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 50%;
+    text-align: center;
 }
 
 .centrecat p {

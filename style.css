@@ -24,7 +24,7 @@ Les balise de bases
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: #fcebf6 url("images/plane.png") repeat-y scroll 70px 41px;
+  background: #f9f5f8 url("images/plane.png") repeat-y scroll 70px 41px;
   background-size: 70px;
 }
 
@@ -98,10 +98,6 @@ Les composants
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.recherche__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-style: italic;
-}
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
   font-style: italic;
@@ -154,9 +150,14 @@ Les layouts
   padding: 5vh 5vw;
 }
 
+.erreur {
+  margin: 0 auto;
+}
+
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .erreur {
@@ -177,9 +178,9 @@ Les layouts
 
 .entete {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #fddcf8;
+  background-color: #fcfbfc;
   padding: 10px;
 }
 .entete__navigation {
@@ -282,8 +283,8 @@ a {
 */
 footer {
   margin: 0 auto;
-  background-color: rgb(245, 125, 187);
-  color: #000;
+  background-color: rgb(255, 153, 28);
+  color: #000000;
 }
 
 .piedpage {

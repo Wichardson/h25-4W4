@@ -33,6 +33,8 @@ h1 {
   text-shadow: 2px 2px #fbe2f3;
   margin: 0 auto;
   text-align: center;
+  color: yellow;
+  background-color: gray;
 }
 
 h2 {
@@ -53,6 +55,8 @@ h5 {
 
 h6 {
   font-size: clamp(0.8rem, 1.7vw, 1.2rem);
+  color: yellow;
+  background-color: gray;
 }
 
 p {
@@ -97,6 +101,10 @@ Les composants
 }
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
 }
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -150,8 +158,9 @@ Les layouts
   padding: 5vh 5vw;
 }
 
-.erreur {
+.erreur img {
   margin: 0 auto;
+  width: 100%;
 }
 
 .populaire .global {
@@ -174,6 +183,11 @@ Les layouts
   margin: 0 auto;
   width: 78vw;
   padding: 4px;
+}
+
+.destination {
+  margin: 0 auto;
+  width: 75%;
 }
 
 .entete {

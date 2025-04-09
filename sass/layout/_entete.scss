@@ -2,14 +2,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #fcfbfc;
+    background-color: #ff9fff;
     padding: 10px;
     &__navigation {
         @media screen and (max-width: 800px) {
             position : absolute;
             top:0;
             right:0;
-            background-color: #fddcf8;
+            background-color: #ff9fff;
             padding : 20px;
             flex-direction: column; 
             width : 100vw;

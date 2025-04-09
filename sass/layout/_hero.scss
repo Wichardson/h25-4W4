@@ -1,10 +1,25 @@
 .hero{
-    background-image: url("images/maldives.jpg");
+    position : relative;
+    //background-image: url("images/maldives.jpg");
+    background-repeat: no-repeat;
     min-height: 100vh;
-    background-size: cover;
+    object-fit: cover;
+
+    &__carrousel{
+        position : absolute;
+        min-height: 100vh;
+        width : 100%;
+        background-position: center;
+        z-index : -1;
+ 
+     }
+     &__contenu {
+         z-index : 9;
+     }
 
     &__titre{
         margin: none;
+        max-width: 100%;
         width: 94vw;
         text-align: center;
         text-shadow: 2px 2px #fbe2f3;
@@ -33,7 +48,7 @@
     justify-content: center;
     flex-direction: row;
     padding: 30px;
-    background-color: white;
+    background-color: rgb(255, 226, 247);
     margin-top: -60px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);

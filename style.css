@@ -100,10 +100,6 @@ Les composants
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.recherche__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-style: italic;
-}
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
   font-style: italic;
@@ -163,12 +159,22 @@ bouton-categorie.scss ------------------------------ .categorie__ul
   margin: 0 auto;
 }
 
+.destination__contenu {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.destination__radio:checked ~ .destination__contenu {
+  max-height: 300px;
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
 .global {
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 5vh 5vw;
+  margin: 0 auto;
 }
 
 .erreur img {
@@ -244,22 +250,34 @@ a {
   position: relative;
   background-repeat: no-repeat;
   min-height: 100vh;
+  object-fit: fill;
 }
 .hero__carrousel {
   position: absolute;
   min-height: 100vh;
   width: 100%;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
+  opacity: 0;
+}
+.hero__carrousel--active {
+  opacity: 1;
 }
 .hero__contenu {
   z-index: 9;
 }
 .hero__titre {
   margin: none;
+  max-width: 100%;
   width: 94vw;
   text-align: center;
   text-shadow: 2px 2px #fbe2f3;
+}
+
+.hero__carrousel:nth-of-type(1) {
+  opacity: 1;
 }
 
 .hero button {
@@ -313,6 +331,14 @@ a {
   .detail button {
     width: 30vw;
   }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 /*

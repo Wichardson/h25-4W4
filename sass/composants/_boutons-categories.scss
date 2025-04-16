@@ -17,3 +17,20 @@ bouton-categorie.scss ------------------------------ .categorie__ul
 
 
 }
+
+
+.destination{
+    &__radio{
+        
+    }
+    &__contenu{
+        max-height: 0px;
+        overflow: hidden;
+    }
+    }
+
+
+
+.destination__radio:checked ~ .destination__contenu {
+    max-height: 300px;
+}

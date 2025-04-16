@@ -32,7 +32,8 @@ function parcourir_bouton(){
                 // <div>${article.excerpt.rendered}</div>
                 articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
-                    <p>${article.excerpt.rendered}</p>
+                    <input class="destination__radio" name="accordeon" type="checkbox">
+                    <div class="destination__contenu">${article.excerpt.rendered}</div>
                     <a href="${article.link}">Lire plus</a>
                 `;
                 destinationList .appendChild(articleElement);

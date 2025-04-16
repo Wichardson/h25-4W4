@@ -3,15 +3,22 @@
     //background-image: url("images/maldives.jpg");
     background-repeat: no-repeat;
     min-height: 100vh;
-    object-fit: cover;
+    object-fit: fill;
 
     &__carrousel{
         position : absolute;
         min-height: 100vh;
         width : 100%;
         background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         z-index : -1;
- 
+        opacity: 0;
+
+        &--active{ //hero__carrousel--active
+            opacity: 1;
+        }
+    
      }
      &__contenu {
          z-index : 9;
@@ -27,6 +34,15 @@
     }
 }
 
+.hero__carrousel:nth-of-type(1){
+ opacity: 1;
+}
+.hero__carrousel:nth-of-type(2){
+ 
+}
+.hero__carrousel:nth-of-type(3){
+ 
+}
 .hero button{
     border: none;
     background-color: rgba(255, 255, 255, 0.6);
@@ -79,5 +95,13 @@
         width: 30vw;
         }
     
+}
+
+.visible {
+    opacity: 1;
+  }
+
+.invisible{
+    opacity: 0;
 }
 

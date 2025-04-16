@@ -17,7 +17,8 @@
         <?php categories_liste("destination") ?>
         <h2 class="destination__titre">Articles de la catégorie</h2>
         <P>hiiiii</P>
-        <div class="destination__list"></div>
+        <div class="destination__list">
+        </div>
     </section>
 
     <footer></footer>

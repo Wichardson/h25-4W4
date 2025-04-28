@@ -7,6 +7,7 @@ function mon_theme_supports() {
 add_theme_support('title-tag');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
+add_image_size('logo', 75, 75, true);
 add_theme_support('custom-logo', array(
   'height'      => 250,
   'width'       => 250,
@@ -30,6 +31,7 @@ filemtime(get_template_directory() .
 '/js/destination.js'),
 true
 );
+
 wp_enqueue_script(
     'carrousel',
     get_template_directory_uri() . '/js/carrousel.js',
@@ -43,10 +45,6 @@ wp_enqueue_script(
 /* 
 */
 add_action('wp_enqueue_scripts', 'theme_4w4_enqueue_styles');
-
-
-
-
 
 
 /**

@@ -1,4 +1,8 @@
-<footer>
+<?php
+$footer_couleur = get_theme_mod('footer_couleur','#00a');
+genere_vague($footer_couleur);
+?>
+<footer style="background-color: <?= $footer_couleur ?>">
     <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">
@@ -7,20 +11,22 @@
                     "container" => "nav",
                 )); ?>
             </div>
-            <div class="piedpage_s1_adresse">
-                <div class="piedpage_s1_adresse_coord">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea quam corporis harum corrupti voluptates, accusantium autem. Fugiat itaque quisquam cumque ratione facilis voluptates repellendus, molestiae maiores incidunt, minus commodi.
+            <div class="piedpage__s1__adresse">
+                <div class="piedpage__s1__adresse__coord">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere porro veniam vitae, tempore corporis omnis nam 
                 </div>
-                <div class="piedpage_s1_adresse_recherche">
-                <?php get_search_form(); ?>
+                <div class="piedpage__s1__adresse__recherche">
+                    <?php get_search_form();   ?>
                 </div>
             </div>
-            <div class="piedpage_s1_description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates delectus aut sed debitis quia fugit error labore nihil, aliquam ullam, numquam veritatis, eveniet explicabo rem! Sit exercitationem nobis ipsam vel.
+            <div class="piedpage__s1__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vero explicabo iure sit enim, ea ducimus nesciunt inventore impedit blanditiis unde omnis facere, deleniti eligendi fuga molestias dolor eveniet laborum!
             </div>
         </section>
-        <section class="piedpage_s2"></section>
-        <section class="piedpage_s3"></section>
+        <section class="piedpage__s2"></section>
+        <section class="piedpage__s3"></section>
+
+
     </div>
 </footer>
 <?php wp_footer() ?>

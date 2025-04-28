@@ -18,8 +18,18 @@
         &--active{ //hero__carrousel--active
             opacity: 1;
         }
-    
      }
+
+     &__radio {
+        position : absolute;
+        width : 100%;
+        top: 80vh;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap : 2rem;
+       }
+
      &__contenu {
          z-index : 9;
      }

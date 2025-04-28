@@ -33,6 +33,7 @@ Les composants
 @import "composants/carte";
 @import "composants/galerie";
 @import "composants/boutons-categories";
+@import "composants/vague";
 
 
 /* /////////////////////////////////
@@ -40,6 +41,7 @@ Les layouts
 //////////////////////////////////// */
 @import "layout/general";
 @import "layout/entete";
+@import "layout/hero-animation";
 // @import "layout/galerie";
 @import "layout/hero";
 @import "layout/footer";

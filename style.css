@@ -31,8 +31,7 @@ h1 {
   text-shadow: 2px 2px #fbe2f3;
   margin: 0 auto;
   text-align: center;
-  color: yellow;
-  background-color: gray;
+  color: rgb(255, 113, 236);
 }
 
 h2 {
@@ -53,8 +52,7 @@ h5 {
 
 h6 {
   font-size: clamp(0.8rem, 1.7vw, 1.2rem);
-  color: yellow;
-  background-color: gray;
+  color: rgb(169, 92, 190);
 }
 
 p {
@@ -99,6 +97,10 @@ Les composants
 }
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
 }
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -166,6 +168,10 @@ bouton-categorie.scss ------------------------------ .categorie__ul
 
 .destination__radio:checked ~ .destination__contenu {
   max-height: 300px;
+}
+
+.vague {
+  position: relative;
 }
 
 /* /////////////////////////////////
@@ -246,11 +252,31 @@ a {
   text-decoration: none;
 }
 
+.hero__titre, .hero__description {
+  position: relative;
+  animation: contenu linear 1s forwards;
+}
+
+.hero__titre {
+  transform: translateY(-1000px);
+}
+
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 1s;
+}
+
+@keyframes contenu {
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .hero {
   position: relative;
   background-repeat: no-repeat;
   min-height: 100vh;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .hero__carrousel {
   position: absolute;
@@ -264,6 +290,15 @@ a {
 }
 .hero__carrousel--active {
   opacity: 1;
+}
+.hero__radio {
+  position: absolute;
+  width: 100%;
+  top: 80vh;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 .hero__contenu {
   z-index: 9;

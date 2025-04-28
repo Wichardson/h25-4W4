@@ -13,8 +13,8 @@ h1{
     text-shadow: 2px 2px #fbe2f3;
     margin: 0 auto;
     text-align: center;
-    color: yellow;
-    background-color: gray;
+    color: rgb(255, 113, 236);
+    
 }
 h2{
     font-size: clamp(1.5rem, 2.5vw, 3rem);
@@ -30,8 +30,7 @@ h5{
 }
 h6{
     font-size: clamp(0.8rem, 1.7vw, 1.2rem);
-    color: yellow;
-    background-color: gray;
+    color: rgb(169, 92, 190);
 }
 p{
     font-size: clamp(.8rem, 1.7vw, 1rem);

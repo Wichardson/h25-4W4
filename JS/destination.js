@@ -1,13 +1,16 @@
+
 /**
  *  Script js permettant d'extraite des destinations de voyage
  */
 (function(){
     console.log("destination.js")
-    const categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-    const domaine = window.location.href
-    const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
-    console.log(apiUrl)
+    let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
+  
+    /* la technique utilisée pour extraire l'url doit êtere généralisée */
+    const domaine = window.origin + "/4w4_03/"
+
     parcourir_bouton()
+    mon_fetch(categoryId)
 
 function parcourir_bouton(){
     const categorie__ul__li = document.querySelectorAll(".categorie__ul__li")
@@ -16,38 +19,35 @@ function parcourir_bouton(){
         elm.addEventListener('mousedown', function(){
             console.log(elm.tagName)
             console.log("elm.dataset.category_id = " , elm.dataset.category_id)
+            mon_fetch(elm.dataset.category_id)
         })
     })
 
 }
 
-
+function mon_fetch(id_category)
+{
+    apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${id_category}`;
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const destinationList = document.querySelector('.destination__list');
+            destinationList.innerHTML = ""
             data.forEach(article => {
                 const articleElement = document.createElement('div');
                 console.log(article.title.rendered)
                 // <div>${article.excerpt.rendered}</div>
                 articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
-                    <input class="destination__radio" name="accordeon" type="checkbox">
-                    <div class="destination__contenu">${article.excerpt.rendered}</div>
+                    <p>${article.excerpt.rendered}</p>
                     <a href="${article.link}">Lire plus</a>
+                    <button>${article.title.rendered}</button>
+                    
                 `;
                 destinationList .appendChild(articleElement);
             });
         })
         .catch(error => console.error('Erreur lors de la récupération des articles:', error));
-    })()
+    }  
+})()
 
-
-    const titles = document.querySelectorAll('h3');
-
-    titles.forEach(title => {
-        title.addEventListener('click', () => {
-            const content = title.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
-    });

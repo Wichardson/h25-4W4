@@ -157,7 +157,7 @@ bouton-categorie.scss ------------------------------ .categorie__ul
 .categorie__ul__li {
   padding: 3px;
   border: 1px solid #aaa;
-  background-color: aquamarine;
+  background-color: rgb(246, 143, 255);
   margin: 0 auto;
 }
 

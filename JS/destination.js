@@ -6,7 +6,7 @@
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     // const domaine = document.querySelector('base').href;
     /* la technique utilisée pour extraire l'url doit êtere généralisée */
-    const domaine = window.origin + "/4w4_03/pays/"
+    const domaine = window.origin + "/4w4_03/";
 
     parcourir_bouton()
     mon_fetch(categoryId)

@@ -1,10 +1,11 @@
 <?php
 /*
-Template Name: Pays
+Template Name: Événement
 */
 get_header();
-
+categories_liste("destination");
 ?>
+<li class="categorie__ul__li" data-category_id="3">Europe</li>
 <section class="populaire">
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -18,12 +19,12 @@ get_header();
         <h2>Description de l'événement</h2>
          <p><?php the_field('description_evenement'); ?></p>
         <!-- ////////////////////////////////////////////////  section rest-api -->
-        <section class="pays">
-            <?php categories_liste("pays") ?>
-            <h2 class="pays__titre">Articles de la catégorie</h2>
-            <div class="pays__list"></div>
+        <section class="destination">
+            <?php categories_liste("destination") ?>
+            <h2 class="destination__titre">Articles de la catégorie</h2>
+            <div class="destination__list"></div>
         </section>
     </div>
 </section>
-<?php genere_vague($footer_couleur); ?>
+
 <?php get_footer(); ?>

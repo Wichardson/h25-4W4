@@ -3,6 +3,7 @@
 Template Name: Pays
 */
 get_header();
+genere_vague($footer_couleur);
 ?>
 <section class="populaire">
     <div class="global">

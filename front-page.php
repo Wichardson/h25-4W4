@@ -20,7 +20,7 @@
         <div class="destination__list">
         </div>
     </section>
-
+<!-- data-methad=categorie -->
     <footer></footer>
     <?php get_footer(); ?>
 </body>

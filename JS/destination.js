@@ -1,13 +1,12 @@
-
 /**
  *  Script js permettant d'extraite des destinations de voyage
  */
 (function(){
     console.log("destination.js")
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-  
+    const domaine = document.querySelector('base').href;
     /* la technique utilisée pour extraire l'url doit êtere généralisée */
-    const domaine = window.origin + "/4w4_03/"
+    //const domaine = window.origin + "/4w4-gr2/"
 
     parcourir_bouton()
     mon_fetch(categoryId)
@@ -41,8 +40,6 @@ function mon_fetch(id_category)
                     <h3>${article.title.rendered}</h3>
                     <p>${article.excerpt.rendered}</p>
                     <a href="${article.link}">Lire plus</a>
-                    <button>${article.title.rendered}</button>
-                    
                 `;
                 destinationList .appendChild(articleElement);
             });
@@ -50,4 +47,3 @@ function mon_fetch(id_category)
         .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }  
 })()
-

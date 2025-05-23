@@ -3,9 +3,8 @@
 Template Name: Événement
 */
 get_header();
-categories_liste("destination");
+
 ?>
-<li class="categorie__ul__li" data-category_id="3">Europe</li>
 <section class="populaire">
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

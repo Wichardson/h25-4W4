@@ -6,13 +6,13 @@
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     const domaine = document.querySelector('base').href;
     /* la technique utilisée pour extraire l'url doit êtere généralisée */
-    //const domaine = window.origin + "/4w4_03/pays/"
+    //const domaine = window.origin + "/4w4-gr2/"
 
     parcourir_bouton()
     mon_fetch(categoryId)
 
 function parcourir_bouton(){
-    const categorie__ul__li = document.querySelectorAll('.categorie__ul__li[data-methad="categorie"]');
+    const categorie__ul__li = document.querySelectorAll(".categorie__ul__li")
     console.log("categorie__ul__li.length = ", categorie__ul__li.length)
     categorie__ul__li.forEach(elm => {
         elm.addEventListener('mousedown', function(){

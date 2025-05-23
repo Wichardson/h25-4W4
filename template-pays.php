@@ -3,7 +3,7 @@
 Template Name: Pays
 */
 get_header();
-genere_vague($footer_couleur);
+
 ?>
 <section class="populaire">
     <div class="global">
@@ -18,12 +18,12 @@ genere_vague($footer_couleur);
         <h2>Description de l'événement</h2>
          <p><?php the_field('description_evenement'); ?></p>
         <!-- ////////////////////////////////////////////////  section rest-api -->
-        <section class="destination">
-            <?php categories_liste("destination") ?>
-            <h2 class="destination__titre">Articles de la catégorie</h2>
-            <div class="destination__list"></div>
+        <section class="pays">
+            <?php categories_liste("pays") ?>
+            <h2 class="pays__titre">Articles de la catégorie</h2>
+            <div class="pays__list"></div>
         </section>
     </div>
 </section>
-
+<?php genere_vague($footer_couleur); ?>
 <?php get_footer(); ?>

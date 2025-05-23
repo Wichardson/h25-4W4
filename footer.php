@@ -13,7 +13,8 @@ genere_vague($footer_couleur);
             </div>
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere porro veniam vitae, tempore corporis omnis nam 
+                    3800 Sherbrook est. Montreal, Québec, Canada, H1X 2A2
+                    514 254-7131
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
                     <?php get_search_form();   ?>

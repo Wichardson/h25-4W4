@@ -1,0 +1,433 @@
+@charset "UTF-8";
+/*
+Theme Name: TP1 Wichardson Jean-Baptiste
+Theme URI: https://referenced.ca
+Author: Wichardson Jean-Baptiste
+Author URI: https://github.com/Wichardson/h25-4W4
+Description: Thème développé dans le cadre du cours 4w4
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 5.3
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tp1-em
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* /////////////////////////////////
+Les variables
+//////////////////////////////////// */
+/* /////////////////////////////////
+Les balise de bases
+//////////////////////////////////// */
+body {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+  text-shadow: 2px 2px #fbe2f3;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(255, 113, 236);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 2.3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+h6 {
+  font-size: clamp(0.8rem, 1.7vw, 1.2rem);
+  color: rgb(169, 92, 190);
+}
+
+p {
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3176470588);
+}
+
+/* /////////////////////////////////
+Les composants
+//////////////////////////////////// */
+/* ----------------------------------------- .menu */
+.menu {
+  display: flex;
+  font-size: 16px;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 30px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+.menu__item a {
+  text-decoration: none;
+  padding: 4px;
+}
+
+.recherche {
+  display: flex;
+  height: 1.6rem;
+  width: 14rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.recherche__input {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  flex: 1 0 auto;
+  padding: 3px;
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 3px;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carte--grande {
+  flex: 1 1 250px;
+}
+.carte__image img {
+  width: 100%;
+}
+.carte__contenu {
+  background-color: #ffffff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8%;
+  overflow: hidden;
+}
+.carte__contenu img {
+  width: 100%;
+}
+.carte__titre {
+  font-size: 40px;
+}
+.carte__description {
+  margin: 0 auto;
+  padding: 1px;
+}
+.carte__bouton {
+  background-color: #dba9cb;
+  display: flex;
+  justify-content: center;
+}
+/**
+bouton-categorie.scss ------------------------------ .categorie__ul
+*/
+.categorie__ul {
+  display: flex;
+  gap: 5px;
+  list-style-type: none;
+}
+.categorie__ul__li {
+  padding: 3px;
+  border: 1px solid #aaa;
+  background-color: rgb(246, 143, 255);
+  margin: 0 auto;
+}
+
+.destination__contenu {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.destination__radio:checked ~ .destination__contenu {
+  max-height: 300px;
+}
+
+.vague {
+  position: relative;
+}
+
+/* /////////////////////////////////
+Les layouts
+//////////////////////////////////// */
+.global {
+  max-width: 1300px;
+  padding: 5vh 5vw;
+  margin: 0 auto;
+}
+
+.erreur img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.erreur {
+  margin: 0 auto;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 50%;
+  text-align: center;
+}
+
+.centrecat p {
+  margin: 0 auto;
+  width: 78vw;
+  padding: 4px;
+}
+
+.destination {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.entete {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ff9fff;
+  padding: 10px;
+}
+.entete__navigation {
+  width: auto;
+  position: static;
+  flex-direction: row;
+  align-content: space-between;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .entete__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff9fff;
+    padding: 20px;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.entete__logo img {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/**
+Animation de la section hero
+Référence https://css-tricks.com/almanac/properties/a/animation/
+
+*/
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
+  position: relative;
+  animation: contenu cubic-bezier(0.53, -0.8, 0.44, 1.64) 1s forwards;
+}
+
+.hero__titre {
+  transform: translateY(-1000px);
+}
+
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 2s;
+}
+
+@keyframes contenu {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.hero {
+  position: relative;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.hero__carrousel {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0;
+}
+.hero__carrousel--active {
+  opacity: 1;
+}
+.hero__radio {
+  position: absolute;
+  width: 100%;
+  top: 80vh;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.hero__contenu {
+  z-index: 9;
+}
+.hero__titre {
+  margin: none;
+  max-width: 100%;
+  width: 94vw;
+  text-align: center;
+  text-shadow: 2px 2px #fbe2f3;
+}
+
+.hero__carrousel:nth-of-type(1) {
+  opacity: 1;
+}
+
+.hero button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.detail {
+  margin: 0 auto;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  padding: 30px;
+  background-color: rgb(255, 226, 247);
+  margin-top: -60px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 800px) {
+  .detail {
+    flex-direction: column;
+  }
+}
+.detail__inscription {
+  padding: 10px;
+}
+.detail__input {
+  padding: 10px;
+  width: 10vw;
+  border: 3px solid #ffd1f5;
+}
+@media screen and (max-width: 800px) {
+  .detail__input {
+    width: 60vw;
+  }
+}
+
+.detail button {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid #fc4fd7;
+  width: 6vw;
+}
+@media screen and (max-width: 800px) {
+  .detail button {
+    width: 30vw;
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  margin: 0 auto;
+  background-color: rgb(255, 103, 232);
+  color: #000000;
+}
+
+.piedpage {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 35vh;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12rem;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 800px) {
+  .piedpage__s1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
+}/*# sourceMappingURL=style.css.map */
